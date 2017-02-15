@@ -1,5 +1,8 @@
 module.exports = {
-  entry: './src/js/core.js',
+  entry: {
+    app: './src/js/core.js',
+    styles: ['./src/css/reset.css', './src/css/core.css']
+  },
   output: {
     path: `${__dirname}/build/`,
     filename: 'app.js'
@@ -13,6 +16,10 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\.css?$/,
+        loaders: ["style-loader", "css-loader"]
       }
     ]
   }
