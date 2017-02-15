@@ -3,6 +3,12 @@ html, body, #display {
     height: 100%;
 }
 
+#display {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 #more-cats-btn {
     position: absolute;
     bottom: 40px;
